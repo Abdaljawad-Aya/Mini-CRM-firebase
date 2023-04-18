@@ -21,10 +21,10 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:150',
             'email' => 'nullable|email',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'website' => 'nullable|url|max:255'
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:min_width=100,min_height=100',
+            'website' => 'nullable|string|max:200'
         ]);
 
         if ($request->hasFile('logo')) {

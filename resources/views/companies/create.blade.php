@@ -26,8 +26,8 @@
 
             <div class="form-group">
                 <label for="logo">Logo</label>
-                <input type="file" class="form-control @error('logo') is-invalid @enderror"
-                       name="logo" value="{{ old('logo') }}" width="100" required>
+                <input type="file" class="form-control-file @error('logo') is-invalid @enderror"
+                       name="logo" value="{{ old('logo') }}" required accept="image/*">
                 @error('logo')
                 <span class="invalid-feedback">{{ $message }}</span>
                 @enderror
