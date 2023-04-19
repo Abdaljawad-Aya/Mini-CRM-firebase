@@ -3,13 +3,16 @@
 @section('content')
     <div class="container">
         <h1 class="text-center">Employees</h1>
-    <a class="btn btn-primary rounded-0 mb-3" href="{{ route('employees.create') }}">Add Employee</a>
+        <a class="btn btn-primary rounded-0 mb-3" href="{{ route('employees.create') }}">Add Employee</a>
+        @if($employees->count() > 0)
+            <a class="btn btn-secondary rounded-0 mb-3 float-md-end" href="{{ route('export') }} ">Generate Report</a>
+        @endif
         <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th scope="col">First name</th>
                 <th scope="col">Last name</th>
-                <th scope="col">Company ID</th>
+                <th scope="col">Company Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Mobile</th>
                 <th scope="col">Actions</th>

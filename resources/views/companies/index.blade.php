@@ -4,6 +4,9 @@
     <div class="container">
         <h1 class="text-center">Companies</h1>
         <a class="btn btn-primary rounded-0 mb-3" href="{{ route('companies.create') }}">Add Companies</a>
+        @if($companies->count() > 0)
+            <a class="btn btn-secondary rounded-0 mb-3 float-md-end" href="{{ route('export') }} ">Generate Report</a>
+        @endif
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
