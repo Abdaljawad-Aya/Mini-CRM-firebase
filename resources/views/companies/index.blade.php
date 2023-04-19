@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Companies</h1>
+        <h1 class="text-center">Companies</h1>
         <a class="btn btn-primary rounded-0 mb-3" href="{{ route('companies.create') }}">Add Companies</a>
             <table class="table table-striped table-hover">
                 <thead>

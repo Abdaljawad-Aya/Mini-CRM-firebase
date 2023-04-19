@@ -2,8 +2,9 @@
 
 @section('content')
     <div class="container">
+        <h1 class="text-center">Employees</h1>
     <a class="btn btn-primary rounded-0 mb-3" href="{{ route('employees.create') }}">Add Employee</a>
-        <table class="table table-dark">
+        <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th scope="col">First name</th>
