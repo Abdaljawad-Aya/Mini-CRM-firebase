@@ -29,7 +29,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['middleware' => 'auth'], function (){
+Route::middleware(['auth'])->group(function (){
     Route::resource('companies', CompanyController::class);
     Route::resource('employees', EmployeeController::class);
     Route::get('/export', [ExportCompanyController::class, 'export'])->name('export');
