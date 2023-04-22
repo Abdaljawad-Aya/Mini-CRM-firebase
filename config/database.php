@@ -45,7 +45,8 @@ return [
 
         'firebase' => [
             'driver' => 'firebase',
-            'credential_path' => env('FIREBASE_CREDENTIALS'),
+            'project_id' => env('FIREBASE_PROJECT_ID'),
+            'private_key' => env('FIREBASE_CREDENTIALS'),
             'database_uri' => env('FIREBASE_DATABASE_URL'),
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
