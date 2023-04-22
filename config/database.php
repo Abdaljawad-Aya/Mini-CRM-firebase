@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'firebase'),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,8 +43,10 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
-            'driver' => 'mysql',
+        'firebase' => [
+            'driver' => 'firebase',
+            'credential_path' => env('FIREBASE_CREDENTIALS'),
+            'database_uri' => env('FIREBASE_DATABASE_URL'),
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
