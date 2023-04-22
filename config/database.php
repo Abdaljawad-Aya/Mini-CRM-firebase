@@ -144,4 +144,8 @@ return [
 
     ],
 
+    'providers' => [
+        App\Providers\FirebaseServiceProvider::class,
+    ]
+
 ];
