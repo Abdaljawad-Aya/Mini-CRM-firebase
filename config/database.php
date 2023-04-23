@@ -65,6 +65,7 @@ return [
 
         'firebase' => [
             'driver' => 'firebase',
+            'database' => 'mini_crm',
             'database_url' => 'https://mini-crm-firebase.firebaseapp.com',
             'service_account' => [
                 'type' => 'service_account',
