@@ -76,7 +76,7 @@ return [
                 'auth_uri' => env('FIREBASE_AUTH_URI'),
                 'token_uri' => env('FIREBASE_TOKEN_URI'),
                 'auth_provider_x500_cert_url' => env('FIREBASE_AUTH_PROVIDER_CERT_URL'),
-                'client_x509_cert_url' => env('FIREBASE_CLIENT_CERT_URL')
+                'client_x509_cert_url' => env('FIREBASE_CLIENT_CERT_URL'),
             ]
         ],
 
