@@ -43,11 +43,8 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'firebase' => [
-            'driver' => 'firebase',
-            'project_id' => env('FIREBASE_PROJECT_ID'),
-            'private_key' => env('FIREBASE_CREDENTIALS'),
-            'database_uri' => env('FIREBASE_DATABASE_URL'),
+        'mysql' => [
+            'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
@@ -64,6 +61,22 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
+        ],
+
+        'firebase' => [
+            'driver' => 'firebase',
+            'database_url' => 'https://mini-crm-firebase.firebaseapp.com',
+            'service_account' => [
+                'type' => 'service_account',
+                'project_id' => env('FIREBASE_PROJECT_ID'),
+                'private_key_id' => env('FIREBASE_PRIVATE_KEY_ID'),
+                'client_id' => env('FIREBASE_CLIENT_EMAIL'),
+                'client_email' => env('FIREBASE_CLIENT_ID'),
+                'auth_uri' => env('FIREBASE_AUTH_URI'),
+                'token_uri' => env('FIREBASE_TOKEN_URI'),
+                'auth_provider_x500_cert_url' => env('FIREBASE_AUTH_PROVIDER_CERT_URL'),
+                'client_x509_cert_url' => env('FIREBASE_CLIENT_CERT_URL')
+            ]
         ],
 
         'pgsql' => [
